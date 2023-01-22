@@ -1,0 +1,65 @@
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: hsl(216, 12%, 8%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainBox {
+  width: 25rem;
+  height: 30rem;
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 2rem;
+  padding: 2rem 1.5rem;
+}
+
+.iconBar {
+  height: 5rem;
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+}
+
+.description {
+  height: 10rem;
+  color: white;
+  line-height: 1.5;
+}
+
+.detail {
+  color: hsl(217, 12%, 63%);
+}
+
+.optionBox {
+  height: 6rem;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.buttonBox {
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+}
+
+.submitButton {
+  width: 18rem;
+  height: 3rem;
+  border: none;
+  border-radius: 3rem;
+  background-color: hsl(25, 97%, 53%);
+  color: white;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: white;
+  color: hsl(25, 97%, 53%);
+}
+
+.noHover {
+  pointer-events: none;
+}

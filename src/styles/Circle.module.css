@@ -1,0 +1,23 @@
+.circle {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mainBox {
+  background-color: hsl(216, 12%, 8%);
+  width: min-content;
+  height: min-content;
+  border-radius: 100%;
+  color: white;
+}
+
+.mainBox:hover {
+  background-color: hsl(217, 12%, 63%);
+  color: black;
+}
