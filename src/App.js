@@ -6,7 +6,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   const [rating, setRating] = useState(0);
-  console.log(rating);
   return (
     <div className="App">
       <BrowserRouter>
