@@ -53,6 +53,10 @@
   background-color: hsl(25, 97%, 53%);
   color: white;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 
 .submitButton:hover {
@@ -73,4 +77,41 @@
   width: min-content;
   height: min-content;
   border-radius: 100%;
+}
+
+.imageBox {
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ratingInfo {
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rate {
+  width: 15rem;
+  height: 3rem;
+  background-color: hsl(217, 18%, 28%);
+  border-radius: 9rem;
+  border: 1px grey black;
+  color: hsl(25, 97%, 53%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.conclusionBox {
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.conclusion {
+  color: hsl(219, 27%, 42%);
 }

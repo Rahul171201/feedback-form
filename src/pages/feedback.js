@@ -1,17 +1,21 @@
 import styles from "../styles/Home.module.css";
 import Circle from "../components/Circle";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-const Feedback = () => {
+const Feedback = (props) => {
+  const [currentRating, setCurrentRating] = useState(0);
   const [selected, setSelected] = useState(null);
-  const [rating, setRating] = useState(0);
 
   const handleSelect = (e) => {
-    console.log(e);
     if (selected !== null) selected.classList.remove(styles.selected);
     e.target.classList.add(styles.selected);
     setSelected(e.target);
-    setRating(+e.target.innerHTML);
+    setCurrentRating(+e.target.innerText);
+  };
+
+  const handleSubmit = () => {
+    props.setRating(currentRating);
   };
 
   return (
@@ -31,8 +35,8 @@ const Feedback = () => {
         <div className={styles.description}>
           <h1>How did we do?</h1>
           <h3 className={styles.detail}>
-            Please let us know how you did with our support! All feedback is
-            appreciated to help us improve our offering
+            Please let us know how you did with our support. All feedback is
+            appreciated to help us improve our offering!
           </h3>
         </div>
         <div className={styles.optionBox}>
@@ -51,7 +55,13 @@ const Feedback = () => {
           })}
         </div>
         <div className={styles.buttonBox}>
-          <button className={styles.submitButton}>SUBMIT</button>
+          <button
+            to="/thankyou"
+            className={styles.submitButton}
+            onClick={handleSubmit}
+          >
+            SUBMIT
+          </button>
         </div>
       </div>
     </main>
