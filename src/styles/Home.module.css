@@ -63,3 +63,14 @@
 .noHover {
   pointer-events: none;
 }
+
+.selected {
+  color: white;
+  background-color: hsl(25, 97%, 53%);
+}
+
+.ratingWrapper {
+  width: min-content;
+  height: min-content;
+  border-radius: 100%;
+}

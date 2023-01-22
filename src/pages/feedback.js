@@ -3,10 +3,15 @@ import Circle from "../components/Circle";
 import { useState } from "react";
 
 const Feedback = () => {
+  const [selected, setSelected] = useState(null);
   const [rating, setRating] = useState(0);
 
   const handleSelect = (e) => {
     console.log(e);
+    if (selected !== null) selected.classList.remove(styles.selected);
+    e.target.classList.add(styles.selected);
+    setSelected(e.target);
+    setRating(+e.target.innerHTML);
   };
 
   return (
@@ -33,9 +38,15 @@ const Feedback = () => {
         <div className={styles.optionBox}>
           {[1, 2, 3, 4, 5].map((item) => {
             return (
-              <Circle key={item} onClick={handleSelect}>
-                <div>{item}</div>
-              </Circle>
+              <div
+                onClick={handleSelect}
+                key={item}
+                className={styles.ratingWrapper}
+              >
+                <Circle>
+                  <div className={styles.noHover}>{item}</div>
+                </Circle>
+              </div>
             );
           })}
         </div>
