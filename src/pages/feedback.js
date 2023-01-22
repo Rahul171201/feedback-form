@@ -1,7 +1,6 @@
 import styles from "../styles/Home.module.css";
 import Circle from "../components/Circle";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 const Feedback = (props) => {
   const [currentRating, setCurrentRating] = useState(0);
